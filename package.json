@@ -1,0 +1,23 @@
+{
+  "name": "tutorial-jquery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgwatgit/tutorial-jquery.git"
+  },
+  "author": "Sean G. Wright <sean@seangwright.me> (http://seangwright.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sgwatgit/tutorial-jquery/issues"
+  },
+  "homepage": "https://github.com/sgwatgit/tutorial-jquery#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
