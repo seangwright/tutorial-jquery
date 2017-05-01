@@ -15,11 +15,12 @@ Code demos of basic javascript and jQuery functionality which current covers
 
 ### Run this?
 
-Requirements
+#### Requirements
 * Nodejs
 * npm
 
-`git clone ...`
-`cd tutorial-jquery`
-`npm i`
-`npm start`
+#### Steps
+* `git clone ...`
+* `cd tutorial-jquery`
+* `npm i`
+* `npm start`
