@@ -24,3 +24,5 @@ Code demos of basic javascript and jQuery functionality which current covers
 * `cd tutorial-jquery`
 * `npm i`
 * `npm start`
+
+_Note: uncomment script tags at the bottom of the `index.html` to test each section of the tutorial_
