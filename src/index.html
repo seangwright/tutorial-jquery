@@ -9,108 +9,67 @@
 </head>
 
 <body>
-    <div id="main-container" class="container">
-        <h1>Submit your form</h1>
-        <form class="form-horizontal">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <!-- Full Name -->
-                        <label for="full_name_id" class="control-label col-sm-2">Full Name</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="John Deer">
-                        </div>
-                    </div>
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li id="show-users" role="presentation" class="active"><a href="#">Load Github Users</a></li>
+                    <li id="show-cats" role="presentation"><a href="#">Load Cats</a></li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Load Things!</h3>
+        </div>
 
-                    <div class="form-group">
-                        <!-- Email -->
-                        <label for="email_id" class="control-label col-sm-2">Email</label>
-                        <div class="col-sm-10">
-                            <input type="email" class="form-control" id="email_id" name="email_name" placeholder="name@domain.com">
-                            <p class="help-text">We value your privacy and will never sell your email address.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="cat-header" class="jumbotron">
+            <p class="lead">Click the button below to load cats from thecatapi.com</p>
+            <p><a class="btn btn-lg btn-success" id="load-cats" href="#" role="button">Load Cats</a></p>
+        </div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <!-- Frequency Field -->
-                        <label class="control-label col-sm-2">Email Me</label>
-                        <div class="col-sm-10">
-                            <div class="radio">
-                                <label class="radio">
-                                    <input name="email_frequency" type="radio" value="day"/>
-                                    Daily
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label class="radio">
-                                    <input name="email_frequency" type="radio" value="week"/>
-                                    Weekly
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label class="radio">
-                                    <input name="email_frequency" type="radio" value="month"/>
-                                    Monthly
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="user-header" class="jumbotron">
+            <p class="lead">Click the button below to load users from github user api</p>
+            <p><a class="btn btn-lg btn-success" id="load-users" href="#" role="button">Load Users</a></p>
+        </div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <!-- Message input !-->
-                        <label class="control-label " for="message_id">Message</label>
-                        <textarea class="form-control" id="message_id" name="message" rows="5"></textarea>
-                    </div>
-                </div>
-            </div>
+        <div class="row marketing">
 
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <!-- Checkbox Group !-->
-                        <label class="control-label">What is your favorite food?</label>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="fav_foods" value="pizza">Pizza
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"  name="fav_foods" value="hamburger">Hamburgers
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <!-- Submit Button -->
-                        <div class="col-sm-10 col-sm-offset-2">
-                            <input type="button" class="btn btn-primary" value="Get Updates!" />
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <footer class="footer">
+            <p>Learning Time!</p>
+        </footer>
 
-        </form>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.js"></script>
     <script src="/00-app.js"></script>
 
     <!--<script src="/01-loading-jQuery.js"></script>-->
     <!--<script src="/02-callbacks-and-bind.js"></script>-->
     <!--<script src="/03-basic-selectors.js"></script>-->
-    
+    <script src="/05-ajax-requests.js"></script>
+
+    <script id="user-block-template" type="text/x-handlebars-template">
+        <div class="col-lg-6">
+            <h4>{{login}}</h4>
+            <p><img src="{{avatar_url}}" width="200px" /></p>
+
+            <h4>Links</h4>
+            <p><a href="{{url}}">Account</a></p>
+            <p><a href="{{repos_url}}">Repositories</a></p>
+        </div>
+    </script>
+
+    <script id="cat-block-template" type="text/x-handlebars-template">
+        <div class="col-lg-6">
+            <h4>Cat {{id}}</h4>
+            <p><img src="{{url}}" width="200px" /></p>
+
+            <h4>Links</h4>
+            <p><a href="{{source_url}}">Source</a></p>
+        </div>
+    </script>
+
 </body>
 
 </html>
