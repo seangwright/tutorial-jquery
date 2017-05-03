@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/sgwatgit/tutorial-jquery#readme",
   "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-es5": "^0.5.0",
     "lite-server": "^2.3.0"
   }
 }
