@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "eslint-config-es5"
+  ],
+  "rules": {
+    "func-names": "off",
+    "indent": [
+      "error",
+      4
+    ],
+    "no-console": "off",
+    "no-undefined": "off",
+    "no-use-before-define": "off",
+    "space-before-function-paren": "off"
+  }
+}
